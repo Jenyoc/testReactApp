@@ -1,0 +1,25 @@
+.header{
+  width: 97%; height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5vw;
+  margin: 0;
+  padding-bottom: 1vw;
+  padding-top: 0.5vw;
+}
+
+.homeImage{
+  width: 4vw; height: auto;
+}
+
+input{
+  width: 30vw;
+  height: auto;
+}
+
+.homeLink{
+  text-decoration: none;
+  color: black;
+  font-size: 3vw;
+}

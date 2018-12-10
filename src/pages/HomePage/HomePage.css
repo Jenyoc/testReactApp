@@ -1,0 +1,14 @@
+.homePage{
+  width: 100%;
+  height: 90%;
+  margin: 2vw;
+  line-height: 2.5;
+}
+
+h1{
+  text-align: center;
+}
+
+.homePageText{
+  font-size: 1.5vw;
+}

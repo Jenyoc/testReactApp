@@ -1,0 +1,104 @@
+.breedInfoPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.breedInfo{
+  height: 90%;
+  display: flex;
+}
+
+.breedName{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.directionColumn{
+  display: flex;
+  flex-direction: column;
+  width: 100%; height: 90%;
+}
+
+.directionRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40vw;
+}
+
+.currentBreedImage{
+  width: auto;
+  height: 30vw;
+}
+
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+
+.arrow:focus{
+  outline: none;
+}
+
+.arrow{
+  display: flex;
+  width: 10%; height: 100%;
+  align-items: center;
+  justify-content: center;
+  perspective: 20vw;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 1.5vw;
+  background: transparent;
+  border: 0;
+  color: #4f75b9;
+  padding: 0;
+}
+
+.left:before {
+  display: flex;
+  transform: rotateY(40deg);
+  width: 120%; height: 75%;
+  transform-origin: 50% 100%;
+  border-radius: 0 1vw 1vw  0;
+  position: absolute;
+  content: ' ';
+  overflow: hidden;
+  border-top: 0.1vw solid gray;
+  border-bottom: 0.1vw solid gray;
+}
+.right:before {
+  display: flex;
+  transform: rotateY(-40deg);
+  width: 120%; height: 75%;
+  transform-origin: 50% 100%;
+  border-radius: 1vw 0 0 1vw;
+  position: absolute;
+  content: ' ';
+  overflow: hidden;
+  border-top: 0.1vw solid gray;
+  border-bottom: 0.1vw solid gray;
+}
+
+.right:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to left, rgba(166, 200, 217, 0.99), rgba(166, 200, 217, 0.05));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.left:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to right, rgba(166, 200, 217, 0.99), rgba(166, 200, 217, 0.05));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.arrow:hover{
+  color: black;
+  font-size: 2vw;
+}
