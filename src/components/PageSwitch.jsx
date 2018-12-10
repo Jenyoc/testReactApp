@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import HomePage from '../../pages/HomePage/HomePage';
-import DogListPage from '../../pages/DogListPage/DogListPage';
-import ContactsPage from '../../pages/ContactsPage/ContactsPage';
-import BreedInfoPage from '../../pages/BreedInfoPage/BreedInfoPage';
-import './PageSwitch.css';
+import HomePage from '../pages/HomePage';
+import DogListPage from '../pages/DogListPage';
+import ContactsPage from '../pages/ContactsPage';
+import BreedInfoPage from '../pages/BreedInfoPage';
 
 const PageSwitch = () =>
   <main className="main">

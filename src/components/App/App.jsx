@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import withViewApp from '../../containers/AppWrapper';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/SideBar';
-import PageSwitch from '../Main/PageSwitch';
+import PageSwitch from '../PageSwitch';
 
 const App = () =>
       <BrowserRouter>

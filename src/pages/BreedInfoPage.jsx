@@ -1,9 +1,9 @@
 import React from 'react';
-import './BreedInfoPage.css';
+import '../components/BreedInfo/BreedInfo.css';
 
-import withViewBreedInfoPage from '../../containers/BreedInfoPageWrapper';
-import BreedInfo from '../../components/BreedInfo';
-import ErrorWindow from '../../components/ErrorWindow';
+import withViewBreedInfoPage from '../containers/BreedInfoPageWrapper';
+import BreedInfo from '../components/BreedInfo/BreedInfo';
+import ErrorWindow from '../components/ErrorWindow/ErrorWindow';
 
 const BreedInfoPage = ({currentBreed, breedImage, errorModalOpen, redirectSet}) => {
   let isServerError = errorModalOpen.value;

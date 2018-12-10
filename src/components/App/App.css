@@ -5,6 +5,13 @@ body{
   font-size: 1vw;
 }
 
+.breedInfoPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
 .app{
   width: 97vw;
   height: 45vw;
@@ -40,11 +47,16 @@ body{
   }
 }
 
-.modalWindow{
-  display: flex;
-  flex-direction: column;
+.main{
+  display: inline-flex;
+  width: 79%;
+  height: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  overflow: scroll;
+  background: #f3f5ea;
+  border-top: 0.1vw solid #afb2b9;
   align-items: center;
   justify-content: center;
-  color: darkred;
-  font-size: 2vw;
+  flex-flow: wrap;
 }

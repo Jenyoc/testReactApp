@@ -1,7 +1,8 @@
 import React from 'react';
+import './ErrorWindow.css';
 
 const ErrorWindow = () =>
-  <div className="modalWindow">
+  <div className="errorWindow">
     <h1>Error</h1>
     <p>Breed not found :(</p>
   </div>;

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 
-import WithViewDogListPage from '../../containers/DogListPageWrapper';
-import './DogsListPage.css';
-import DogList from '../../components/DogList';
-import ErrorWindow from '../../components/ErrorWindow';
+import WithViewDogListPage from '../containers/DogListPageWrapper';
+import '../components/DogList/DogList.css';
+import DogList from '../components/DogList/DogList';
+import ErrorWindow from '../components/ErrorWindow/ErrorWindow';
 
 class DogListPage extends Component {
   componentDidMount() {

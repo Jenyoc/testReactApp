@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import './DogList.css';
 
 const DogList = ({breedImage, currentBreed, breeds, setCurrentBreed, getBreedImagesJSON}) => {
 
   let cardFocusHandle = (event) => {
     const currentBreed = event.target.dataset.breed;
-    if (event.target.classList.contains('dogCard') || event.target.classList.contains('dogsListPage')) {
+    if (event.target.classList.contains('dogCard') || event.target.classList.contains('dogList')) {
       const elements = document.getElementsByClassName('dogCard');
       let elementsArr = Object.values(elements);
       elementsArr.map(el => el.classList.remove('translateRight', 'translateLeft'));
@@ -27,7 +28,7 @@ const DogList = ({breedImage, currentBreed, breeds, setCurrentBreed, getBreedIma
   let breadsArrKeys = Object.keys(breeds.list);
 
   return (
-    <div className="dogsListPage"
+    <div className="dogList"
          onMouseOver={cardFocusHandle}
          onClick={cardFocusHandle}>
       {breadsArrKeys.length ? breadsArrKeys.map(el =>
