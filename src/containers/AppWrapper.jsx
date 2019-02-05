@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getAllBreedsJSON } from '../actions/BreedListAction';
-
 const AppWrapper = Component => {
   const WrappedComponent = props =>
-    <Component getAllBreedsJSON= {props.getAllBreedsJSON}
-               breeds={props.breeds} />;
+    <Component getAllBreedsJSON = {props.getAllBreedsJSON}
+               breeds = {props.breeds} />;
 
   const mapDispatchToProps = dispatch =>
     bindActionCreators({
