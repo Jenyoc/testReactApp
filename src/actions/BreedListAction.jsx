@@ -1,3 +1,17 @@
+import { Observable } from 'rxjs';
+
+export const getDataRx = Observable.create(observer => {
+  fetch('https://dog.ceo/api/breeds/list/all')
+      .then(response => response.json())
+      .then(data => {
+        observer.next(data);
+        observer.complete();
+      })
+      .catch(err => observer.error(err));
+});
+
+getDataRx.subscribe(data => {console.log(data)});
+
 export const getBreedList = json => {
   return {
     type: 'ALL_BREEDS_LIST',
