@@ -1,17 +1,3 @@
-import { Observable } from 'rxjs';
-
-export const getDataRx = Observable.create(observer => {
-  fetch('https://dog.ceo/api/breeds/list/all')
-      .then(response => response.json())
-      .then(data => {
-        observer.next(data);
-        observer.complete();
-      })
-      .catch(err => observer.error(err));
-});
-
-getDataRx.subscribe(data => {console.log(data)});
-
 export const getBreedList = json => {
   return {
     type: 'ALL_BREEDS_LIST',
@@ -62,3 +48,21 @@ export const getAllBreedsJSON = () => {
       .catch(() => dispatch(getAllBreedsError()));
   };
 };
+
+// export const getAllBreedsJSON = () => {
+//   const uri = 'https://dog.ceo/api/breeds/list/all';
+//   return dispatch => {
+//     dispatch(getBreedList());
+//     return fetch(uri)
+//         .then(response => {
+//           if (!response.ok) {
+//             throw Error()
+//           }
+//           return response.json();
+//         })
+//         .then(post => {
+//           return dispatch(getBreedList(post.message));
+//         })
+//         .catch(() => dispatch(getAllBreedsError()));
+//   };
+// };
