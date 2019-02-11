@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { fromEvent } from "rxjs";
 
 import WithViewDogListPage from '../containers/DogListPageWrapper';
 import '../components/DogList/DogList.css';
@@ -10,12 +11,17 @@ class DogListPage extends Component {
     const{errorModalClose, getAllBreedsJSON}=this.props;
     errorModalClose();
     getAllBreedsJSON();
+    const btn = document.querySelector('.test-btn');
+    const getDataRx = fromEvent(btn, 'click');
+
+    getDataRx.subscribe(e => {console.log(e)});
   };
 
   render() {
     const isServerError = this.props.errorModalOpen.value;
     return (
       <Fragment>
+        <button className="test-btn">1111</button>
         {!isServerError
         ? <DogList breedImage={this.props.breedImage}
                    currentBreed={this.props.currentBreed}
